@@ -8,5 +8,22 @@ class Movie
     public $plot;
     public $vote;
 
-    // costruttore 
+    // costruttore
+    public function __construct($name, $year, $genre, $plot, $vote)
+    {
+        $this->name = $name;
+        $this->year = $year;
+        $this->genre = $genre;
+        $this->plot = $plot;
+        $this->vote = $vote;
+    }
+
+    public function getHTML()
+    {
+        return "Name: " . $this->name . "</br>" .
+            "Year: " . $this->year . "</br>" .
+            "Genre: " . $this->genre . "</br>" .
+            "Plot: " . $this->plot . "</br>" .
+            "Vote: " . $this->vote . "</br>";
+    }
 }
